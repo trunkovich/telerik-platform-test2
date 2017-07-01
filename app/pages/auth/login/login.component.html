@@ -1,0 +1,47 @@
+<ActionBar title="Login"
+           class="action-bar"></ActionBar>
+
+<ActivityIndicator [busy]="loading$ | async" class="activity-indicator"></ActivityIndicator>
+
+<StackLayout [formGroup]="loginForm"
+             class="form">
+
+  <StackLayout class="input-field p-x-16">
+    <Label text="Phone"
+           class="label font-weight-bold m-b-5"></Label>
+    <TextField formControlName="phone"
+               class="input"></TextField>
+    <StackLayout class="hr-light"></StackLayout>
+    <Label text="Phone is required"
+           class="text-danger"
+           [visibility]="loginForm.invalid &&
+                        (loginForm.get('phone').dirty || loginForm.get('phone').touched) &&
+                        loginForm.get('phone').hasError('required') ? 'visible' : 'hidden'"></Label>
+  </StackLayout>
+
+  <StackLayout class="input-field p-x-16">
+    <Label text="Password"
+           class="label font-weight-bold m-b-5"></Label>
+    <TextField formControlName="password"
+               class="input"></TextField>
+    <StackLayout class="hr-light"></StackLayout>
+    <Label text="Password is required"
+           class="text-danger"
+           [visibility]="loginForm.invalid &&
+                        (loginForm.get('password').dirty || loginForm.get('password').touched) &&
+                        loginForm.get('password').hasError('required') ? 'visible' : 'hidden'"></Label>
+  </StackLayout>
+
+  <StackLayout class="p-x-16">
+    <Label class="text-danger text-center" [text]="error$ | async"></Label>
+  </StackLayout>
+
+  <Button text="login"
+          (tap)="login(loginForm)"
+          class="btn btn-primary"></Button>
+
+  <Label text="Forgot password?"
+         class="text-center text-muted m-t-16"
+         [nsRouterLink]="['../', 'forgot-password']" pageTransition="slideLeft"></Label>
+
+</StackLayout>

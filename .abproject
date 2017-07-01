@@ -1,0 +1,28 @@
+{
+  "ProjectName": "ns30-angular",
+  "ProjectGuid": "{63a071a3-2b1b-497c-a455-b500f412ba79}",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.ns30angular",
+  "DisplayName": "ns30-angular",
+  "Author": "",
+  "Description": "ns30-angular",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{F0A65104-D4F4-4012-B799-F612D75820F6}",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "FrameworkVersion": "3.0.0",
+  "Framework": "NativeScript"
+}
